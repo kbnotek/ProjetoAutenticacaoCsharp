@@ -45,7 +45,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtConfSenha = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbNivel = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -109,6 +109,7 @@
             this.txtSobreNome.Name = "txtSobreNome";
             this.txtSobreNome.Size = new System.Drawing.Size(183, 20);
             this.txtSobreNome.TabIndex = 6;
+            this.txtSobreNome.TextChanged += new System.EventHandler(this.txtSobreNome_TextChanged);
             this.txtSobreNome.Leave += new System.EventHandler(this.txtSobreNome_Leave);
             // 
             // txtLogin
@@ -118,6 +119,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(183, 20);
             this.txtLogin.TabIndex = 7;
+            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // label5
             // 
@@ -182,15 +184,16 @@
             this.txtConfSenha.Name = "txtConfSenha";
             this.txtConfSenha.Size = new System.Drawing.Size(183, 20);
             this.txtConfSenha.TabIndex = 8;
-            this.txtConfSenha.UseSystemPasswordChar = true;
+            this.txtConfSenha.UseSystemPasswordChar = true;         
+            this.txtConfSenha.Leave += new System.EventHandler(this.txtConfSenha_Leave);
             // 
-            // comboBox1
+            // cmbNivel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(373, 113);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(122, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cmbNivel.FormattingEnabled = true;
+            this.cmbNivel.Location = new System.Drawing.Point(373, 113);
+            this.cmbNivel.Name = "cmbNivel";
+            this.cmbNivel.Size = new System.Drawing.Size(122, 21);
+            this.cmbNivel.TabIndex = 9;
             // 
             // button2
             // 
@@ -209,7 +212,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(615, 374);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbNivel);
             this.Controls.Add(this.txtConfSenha);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtSenha);
@@ -253,7 +256,7 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtConfSenha;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbNivel;
         private System.Windows.Forms.Button button2;
     }
 }

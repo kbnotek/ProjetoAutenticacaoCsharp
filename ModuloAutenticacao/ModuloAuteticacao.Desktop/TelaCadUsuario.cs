@@ -62,9 +62,49 @@ namespace ModuloAuteticacao.Desktop
         {           
             txtLogin.Text = txtNome.Text;
             txtLogin.BackColor = Color.White;
+            //Puxar o primeiro nome 
+            string[] nome = txtNome.Text.Split(' ');
+            //txtLogin.Text = nome[0];  //ESSE CODIGO MOSTRA O PRIMEIRO NOME 
+
+            // puxar o sobre nome -- PUXA O ULTIMO NOME ! 
+
+            string substring = "";
+
+            string[] subs = txtSobreNome.Text.Split();
+            foreach (string sub in subs)
+            {
+                // MessageBox.Show($"Substring: {sub}");
+                substring = sub;
+            }
+            //===================
+            txtLogin.Text = $"{nome[0].ToLower()}.{substring.ToLower()}";            
             
-            
-  
+        }
+
+        private void txtLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSobreNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConfSenha_Leave(object sender, EventArgs e)
+        {
+            if (txtConfSenha.Text.Equals(txtSenha.Text))
+            {
+                
+               
+            }
+            else
+            {
+                MessageBox.Show("As Senhas não Confere");
+                txtConfSenha.Clear();
+                txtSenha.Clear();
+                txtSenha.Focus();
+            }
         }
     }
 }
