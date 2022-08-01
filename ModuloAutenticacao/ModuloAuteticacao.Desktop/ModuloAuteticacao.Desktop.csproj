@@ -61,6 +61,12 @@
     <Compile Include="TelaCadUsuario.Designer.cs">
       <DependentUpon>TelaCadUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaNivel.Designer.cs">
+      <DependentUpon>TelaNivel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="TelaAutenticacao.resx">
       <DependentUpon>TelaAutenticacao.cs</DependentUpon>
     </EmbeddedResource>

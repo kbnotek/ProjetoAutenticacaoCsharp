@@ -184,7 +184,7 @@
             this.txtConfSenha.Name = "txtConfSenha";
             this.txtConfSenha.Size = new System.Drawing.Size(183, 20);
             this.txtConfSenha.TabIndex = 8;
-            this.txtConfSenha.UseSystemPasswordChar = true;         
+            this.txtConfSenha.UseSystemPasswordChar = true;
             this.txtConfSenha.Leave += new System.EventHandler(this.txtConfSenha_Leave);
             // 
             // cmbNivel
