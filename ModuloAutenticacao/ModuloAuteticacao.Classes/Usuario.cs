@@ -12,8 +12,5 @@ namespace ModuloAuteticacao.Classes
         // pode declar como no Java Script - > var Login = "teste";
         public string Login {get; set;}
         public string Senha { get; set;}
-       
-        
-        
     }
 }
