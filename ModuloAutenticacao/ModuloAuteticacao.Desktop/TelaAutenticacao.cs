@@ -75,5 +75,10 @@ namespace ModuloAuteticacao.Desktop
         {
 
         }
+
+        private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

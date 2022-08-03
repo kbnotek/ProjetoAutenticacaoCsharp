@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ModuloAuteticacao.Classes
+﻿namespace ModuloAuteticacao.Classes
 {
     //Classe é um Conjunto de Objeto!
     public class Usuario

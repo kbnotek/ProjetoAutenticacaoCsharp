@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
+using System.Data;
 
 namespace ModuloAuteticacao.Classes
 {
     public class NivelDAO
     {
         public string Inserir(string nome)
-        {   //Abrindo a Conexão
+        {  
+            //Abrindo a Conexão
             Conexao.MinhaInstancia.Open();
             //Definindo o Comando
             SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
@@ -32,13 +29,32 @@ namespace ModuloAuteticacao.Classes
         {
             return "Você vai Atualiar";
         }
-        public string Pesquisar()
+        public DataTable Pesquisar() 
         {
-            return "Pesquisar";
+            //Abrindo a Conexão
+            Conexao.MinhaInstancia.Open();
+            //Definindo o Comando
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            //Definindo o tipo de Comando
+            comando.CommandType = System.Data.CommandType.Text;
+            //Iniciando a DML 
+            comando.CommandText = "SELECT * FROM Nivel";
+            //DataTable (BANCO DE DADOS NA MEMORIA )
+            DataTable dataTable = new DataTable();
+            //Metodo de Leitura - Execução de Leitura
+            SqlDataReader reader = comando.ExecuteReader();
+            //Carregar Leitura 
+            dataTable.Load(reader);
+            Conexao.MinhaInstancia.Close();
+            return dataTable;
         }
         public string Deletar()
         {
             return "Voce vai Deletar";
+        }
+        public string CarregarGrid()
+        {
+            return "Carregamdo Formulario";
         }
     }
 }

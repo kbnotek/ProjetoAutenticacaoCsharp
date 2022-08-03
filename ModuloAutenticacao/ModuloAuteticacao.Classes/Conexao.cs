@@ -1,13 +1,11 @@
-﻿using System.Data.Common;
+﻿//Namespace = Pasta ( Lógica )
 using System.Data.SqlClient;
-
+//Classe do Módulo 
 namespace ModuloAuteticacao.Classes
 {
     internal class Conexao
     {
-
         public static SqlConnection _conn;
-
         public static SqlConnection MinhaInstancia
         { //a chave da propriedade
             get

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaNivel));
             this.lblId = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -37,63 +38,70 @@
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNivel)).BeginInit();
             this.SuspendLayout();
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(65, 85);
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(161, 26);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(18, 13);
+            this.lblId.Size = new System.Drawing.Size(46, 13);
             this.lblId.TabIndex = 0;
-            this.lblId.Text = "ID";
+            this.lblId.Text = "Codigo";
             this.lblId.Click += new System.EventHandler(this.lblId_Click);
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(61, 159);
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(57, 63);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
+            this.lblNome.Size = new System.Drawing.Size(39, 13);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(102, 82);
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(213, 23);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(272, 20);
+            this.txtId.Size = new System.Drawing.Size(39, 20);
             this.txtId.TabIndex = 2;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(102, 156);
+            this.txtNome.Location = new System.Drawing.Point(102, 60);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(272, 20);
+            this.txtNome.Size = new System.Drawing.Size(270, 20);
             this.txtNome.TabIndex = 3;
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(353, 212);
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(338, 100);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnCadastrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnCadastrar_MouseClick);
             // 
             // dgvNivel
             // 
             this.dgvNivel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNivel.Location = new System.Drawing.Point(12, 308);
+            this.dgvNivel.Location = new System.Drawing.Point(12, 183);
             this.dgvNivel.Name = "dgvNivel";
             this.dgvNivel.Size = new System.Drawing.Size(434, 195);
             this.dgvNivel.TabIndex = 5;
             // 
             // btnDeletar
             // 
-            this.btnDeletar.Location = new System.Drawing.Point(246, 212);
+            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Location = new System.Drawing.Point(141, 100);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(75, 23);
             this.btnDeletar.TabIndex = 6;
@@ -103,7 +111,8 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(146, 212);
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(257, 100);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 7;
@@ -113,7 +122,8 @@
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(38, 212);
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(60, 100);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 8;
@@ -121,12 +131,24 @@
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(150, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 24);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "CADASTRADOS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // TelaNivel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(458, 527);
+            this.ClientSize = new System.Drawing.Size(458, 401);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnDeletar);
@@ -136,6 +158,7 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblId);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaNivel";
             this.Text = "TelaNivel";
             this.Load += new System.EventHandler(this.TelaNivel_Load);
@@ -156,5 +179,6 @@
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Label label1;
     }
 }
