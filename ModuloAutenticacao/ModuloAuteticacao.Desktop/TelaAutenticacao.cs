@@ -74,11 +74,6 @@ namespace ModuloAuteticacao.Desktop
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
-        }
-
-        private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
+        }        
     }
 }

@@ -32,7 +32,7 @@
             this.lblId = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtNomeNivel = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.dgvNivel = new System.Windows.Forms.DataGridView();
             this.btnDeletar = new System.Windows.Forms.Button();
@@ -71,12 +71,12 @@
             this.txtId.Size = new System.Drawing.Size(39, 20);
             this.txtId.TabIndex = 2;
             // 
-            // txtNome
+            // txtNomeNivel
             // 
-            this.txtNome.Location = new System.Drawing.Point(102, 60);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(270, 20);
-            this.txtNome.TabIndex = 3;
+            this.txtNomeNivel.Location = new System.Drawing.Point(102, 60);
+            this.txtNomeNivel.Name = "txtNomeNivel";
+            this.txtNomeNivel.Size = new System.Drawing.Size(270, 20);
+            this.txtNomeNivel.TabIndex = 3;
             // 
             // btnCadastrar
             // 
@@ -97,6 +97,7 @@
             this.dgvNivel.Name = "dgvNivel";
             this.dgvNivel.Size = new System.Drawing.Size(434, 195);
             this.dgvNivel.TabIndex = 5;
+            this.dgvNivel.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNivel_RowHeaderMouseClick);
             // 
             // btnDeletar
             // 
@@ -154,7 +155,7 @@
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.dgvNivel);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtNomeNivel);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblId);
@@ -173,7 +174,7 @@
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtNomeNivel;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridView dgvNivel;
         private System.Windows.Forms.Button btnDeletar;

@@ -25,9 +25,20 @@ namespace ModuloAuteticacao.Classes
             return "Dados Inseridos com Sucesso!";
 
         }
-        public string Atualizar()
+        public string Atualizar(string Id, string Nome)
         {
-            return "Você vai Atualiar";
+            Conexao.MinhaInstancia.Open();
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = ("update Nivel set Nome=@Nome where codigo=@ID;");
+            comando.Parameters.AddWithValue("@ID", Id);
+            comando.Parameters.AddWithValue("@Nome", Nome);
+            comando.ExecuteNonQuery();
+
+            Conexao.MinhaInstancia.Close();
+
+            return "Atualizado com Sucesso!";
+        
         }
         public DataTable Pesquisar() 
         {
@@ -48,13 +59,45 @@ namespace ModuloAuteticacao.Classes
             Conexao.MinhaInstancia.Close();
             return dataTable;
         }
-        public string Deletar()
+        public string Deletar(string Id)
         {
-            return "Voce vai Deletar";
+
+            Conexao.MinhaInstancia.Open();
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = ("DELETE Nivel WHERE codigo=@ID;");
+            comando.Parameters.AddWithValue("@ID", Id);
+            comando.ExecuteNonQuery();
+
+            Conexao.MinhaInstancia.Close();
+            return "Deletado com Sucesso!";
+
+
         }
         public string CarregarGrid()
         {
-            return "Carregamdo Formulario";
+            return "Carregando Formulario";
+        }
+        public DataTable Pesquisar(string nome) //Sobre carga de metódo com o mesmo nome ( @Overload )
+        {
+            //Abrindo a Conexão
+            Conexao.MinhaInstancia.Open();
+            //Definindo o Comando
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            //Definindo o tipo de Comando
+            comando.CommandType = System.Data.CommandType.Text;
+            //Iniciando a DML 
+            comando.CommandText = "SELECT * FROM Nivel WHERE Nome =@Nome";
+            //Adicionando Parâmetros contra SQL Injection
+            comando.Parameters.AddWithValue("@Nome", nome);
+            //DataTable (BANCO DE DADOS NA MEMORIA )
+            DataTable dataTable = new DataTable();
+            //Metodo de Leitura - Execução de Leitura
+            SqlDataReader reader = comando.ExecuteReader();
+            //Carregar Leitura 
+            dataTable.Load(reader);
+            Conexao.MinhaInstancia.Close();
+            return dataTable;
         }
     }
 }
