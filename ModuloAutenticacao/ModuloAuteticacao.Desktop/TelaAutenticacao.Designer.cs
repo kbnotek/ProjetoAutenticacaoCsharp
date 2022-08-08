@@ -35,6 +35,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,12 +72,12 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(289, 20);
             this.txtSenha.TabIndex = 3;
-            this.txtSenha.UseSystemPasswordChar = true;           
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(142, 207);
+            this.btnEntrar.Location = new System.Drawing.Point(196, 207);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(81, 23);
             this.btnEntrar.TabIndex = 4;
@@ -94,6 +95,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(68, 207);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 6;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TelaAutenticacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,6 +113,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(356, 242);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
@@ -128,6 +141,7 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 

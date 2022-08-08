@@ -100,5 +100,11 @@ namespace ModuloAuteticacao.Desktop
                 txtSenha.Focus();
             }
         }
+
+        private void cmbNivel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
+        }
     }
 }

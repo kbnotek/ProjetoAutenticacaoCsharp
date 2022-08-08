@@ -195,6 +195,7 @@
             this.cmbNivel.Name = "cmbNivel";
             this.cmbNivel.Size = new System.Drawing.Size(122, 21);
             this.cmbNivel.TabIndex = 9;
+            this.cmbNivel.SelectedIndexChanged += new System.EventHandler(this.cmbNivel_SelectedIndexChanged);
             // 
             // button2
             // 

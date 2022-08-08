@@ -35,7 +35,7 @@
             this.txtNomeNivel = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.dgvNivel = new System.Windows.Forms.DataGridView();
-            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -99,16 +99,16 @@
             this.dgvNivel.TabIndex = 5;
             this.dgvNivel.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNivel_RowHeaderMouseClick);
             // 
-            // btnDeletar
+            // btnApagar
             // 
-            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.Location = new System.Drawing.Point(141, 100);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletar.TabIndex = 6;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseVisualStyleBackColor = true;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            this.btnApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagar.Location = new System.Drawing.Point(141, 100);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(75, 23);
+            this.btnApagar.TabIndex = 6;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnPesquisar
             // 
@@ -152,7 +152,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.btnDeletar);
+            this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.dgvNivel);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtNomeNivel);
@@ -177,7 +177,7 @@
         private System.Windows.Forms.TextBox txtNomeNivel;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridView dgvNivel;
-        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Label label1;
