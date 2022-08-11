@@ -49,7 +49,7 @@ namespace ModuloAuteticacao.Classes
             //Definindo o tipo de Comando
             comando.CommandType = System.Data.CommandType.Text;
             //Iniciando a DML 
-            comando.CommandText = "SELECT * FROM Nivel";
+             comando.CommandText = "SELECT * FROM Nivel";         
             //DataTable (BANCO DE DADOS NA MEMORIA )
             DataTable dataTable = new DataTable();
             //Metodo de Leitura - Execução de Leitura
@@ -90,6 +90,27 @@ namespace ModuloAuteticacao.Classes
             comando.CommandText = "SELECT * FROM Nivel WHERE Nome =@Nome";
             //Adicionando Parâmetros contra SQL Injection
             comando.Parameters.AddWithValue("@Nome", nome);
+            //DataTable (BANCO DE DADOS NA MEMORIA )
+            DataTable dataTable = new DataTable();
+            //Metodo de Leitura - Execução de Leitura
+            SqlDataReader reader = comando.ExecuteReader();
+            //Carregar Leitura 
+            dataTable.Load(reader);
+            Conexao.MinhaInstancia.Close();
+            return dataTable;
+        }
+        public DataTable Pesquisar2(string Id) //Sobre carga de metódo com o mesmo nome ( @Overload )
+        {
+            //Abrindo a Conexão
+            Conexao.MinhaInstancia.Open();
+            //Definindo o Comando
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            //Definindo o tipo de Comando
+            comando.CommandType = System.Data.CommandType.Text;
+            //Iniciando a DML 
+            comando.CommandText = "SELECT * FROM Nivel WHERE Codigo =@Codigo";
+            //Adicionando Parâmetros contra SQL Injection
+            comando.Parameters.AddWithValue("@Codigo", Id);
             //DataTable (BANCO DE DADOS NA MEMORIA )
             DataTable dataTable = new DataTable();
             //Metodo de Leitura - Execução de Leitura

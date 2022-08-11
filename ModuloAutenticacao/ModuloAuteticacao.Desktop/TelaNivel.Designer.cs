@@ -65,11 +65,11 @@
             // 
             // txtId
             // 
-            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(213, 23);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(39, 20);
             this.txtId.TabIndex = 2;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // txtNomeNivel
             // 
@@ -97,6 +97,7 @@
             this.dgvNivel.Name = "dgvNivel";
             this.dgvNivel.Size = new System.Drawing.Size(434, 195);
             this.dgvNivel.TabIndex = 5;
+            this.dgvNivel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNivel_CellContentClick);
             this.dgvNivel.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNivel_RowHeaderMouseClick);
             // 
             // btnApagar

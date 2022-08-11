@@ -40,6 +40,7 @@ namespace ModuloAuteticacao.Desktop
         {
             NivelDAO pesqNome = new NivelDAO();
             dgvNivel.DataSource = pesqNome.Pesquisar(txtNomeNivel.Text);
+            dgvNivel.DataSource = pesqNome.Pesquisar2(txtId.Text);
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
@@ -70,6 +71,16 @@ namespace ModuloAuteticacao.Desktop
            txtId.Text = dgvNivel.Rows[e.RowIndex].Cells[0].Value.ToString();
            txtNomeNivel.Text = dgvNivel.Rows[e.RowIndex].Cells[1].Value.ToString();
             
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvNivel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
